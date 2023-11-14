@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
+  before_action :find_user, only: %i[index show]
+
   def index
-    @user = User.find(params[:user_id])
     @posts = @user.posts
   end
 
-  def show
+  def find_user
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+  end
+
+  def show
+    @posts = @user.posts.find(params[:id])
   end
 end
