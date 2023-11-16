@@ -1,1 +1,41 @@
-<h1>Here is a specific user searched by id</h1>
+<section class="user-info-container">
+  <%= link_to "Back to Home", root_path, class: "back-link" %>
+
+  <section class="user-item">
+    <%= link_to user_path(@user) do %>
+      <div class="profile-photo-container">
+        <%= image_tag(@user.photo, alt: @user.name, class: "profile-photo") %>
+      </div>
+      <div class="user-details-container">
+        <h2 class="user-name"><%= @user.name %></h2>
+        <h4 class="user-posts">Number of posts: <%= @user.post_counter %></h4>
+      </div>
+    <% end %>
+  </section>
+
+  <div class="bio-container">
+    <h4>Bio</h4>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <div class="simple-post-container">
+    <% @user.three_most_recent_post.each_with_index do |post, index| %>
+      <%= link_to user_post_path(@user, post) do %>
+        <div class="simple-post">
+          <h4><%= post.title %> #<%= index + 1 %></h4>
+          <p><%= post.text %></p>
+          <div class="comments-likes">
+            <span>Comments: <%= post.comments_counter %></span>
+            <span>Likes: <%= post.likes_counter %></span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to user_posts_path(@user) do %>
+    <button class="see-all-post-btn">
+      <span>See all posts</span>
+    </button>
+  <% end %>
+</section>

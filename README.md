@@ -98,10 +98,6 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-## 👥 Authors <a name="authors"></a>
-
-### Author:
-
 👤 **EL MEHDI AHMIDOU**
 
 - GitHub: [@ahmidou09](https://github.com/ahmidou09)
