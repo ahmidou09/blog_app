@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :find_user, only: [:new, :create]
-  before_action :find_post, only: [:new, :create]
+  before_action :find_user, only: %i[new create]
+  before_action :find_post, only: %i[new create]
 
   def new
     @comment = @post.comments.new
