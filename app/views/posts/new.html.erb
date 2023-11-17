@@ -1,0 +1,21 @@
+<h2>Create new post</h2>
+
+<%= form_with model: [@user, @post] do |form| %>
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </div>
+
+  <%= form.submit "Create" %>
+<% end %>

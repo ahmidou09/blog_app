@@ -13,6 +13,11 @@
     <% end %>
   </section>
 
+  <%= link_to new_user_post_path(@user) do %>
+    <button class="create-post-btn">Create new post</button>
+  <% end %>
+
+
   <% @posts.each_with_index do |post, index| %>
     <%= link_to user_post_path(@user, post) do %>
       <div class="simple-post">

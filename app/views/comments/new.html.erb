@@ -1,0 +1,16 @@
+<h2>Create new comment</h2>
+
+<%= form_with model: @comment, url: user_post_comments_path(@user, @post) do |form| %>
+  <% if @comment.errors.any? %>
+    <% @comment.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </div>
+
+  <%= form.submit "Add" %>
+<% end %>

@@ -14,9 +14,19 @@
     </div>
   </div>
 
+  <div class="like-box">
+    <%= form_with(model: @like, url: user_post_likes_path(@user, @post)) do |form| %>
+      <%= form.submit "Like" %>
+    <% end %>
+  </div>
+
   <div class="details-comments">
     <% @post.comments.each do |comment| %>
       <span><%= comment.user.name %>: <%= comment.text %></span>
     <% end %>
   </div>
 </section>
+
+<%= link_to new_user_post_comment_path(@user, @post) do %>
+  <button class="comment-btn">Add comment</button>
+<% end %>

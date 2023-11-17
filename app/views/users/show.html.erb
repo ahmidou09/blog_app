@@ -18,6 +18,10 @@
     <p><%= @user.bio %></p>
   </div>
 
+  <%= link_to new_user_post_path(@user) do %>
+     <button class="create-post-btn">Create new post</button>
+  <% end %>
+
   <div class="simple-post-container">
     <% @user.three_most_recent_post.each_with_index do |post, index| %>
       <%= link_to user_post_path(@user, post) do %>
