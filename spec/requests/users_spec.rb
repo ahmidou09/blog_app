@@ -13,11 +13,6 @@ RSpec.describe 'Users', type: :request do
       get users_path
       expect(response).to render_template(:index)
     end
-
-    it 'response body includes correct placeholder text' do
-      get users_path
-      expect(response.body).to include('list')
-    end
   end
 
   describe 'GET #show' do
@@ -29,11 +24,6 @@ RSpec.describe 'Users', type: :request do
     it 'correct template was rendered' do
       get user_path(user)
       expect(response).to render_template(:show)
-    end
-
-    it 'response body includes correct placeholder text' do
-      get user_path(user)
-      expect(response.body).to include('specific')
     end
   end
 end

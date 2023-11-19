@@ -3,7 +3,7 @@
     <li class="user-item">
       <%= link_to user_path(user) do %>
         <div class="profile-photo-container">
-          <%= image_tag(user.photo, alt: user.name, class: "profile-photo") %>
+          <%= image_tag(user.photo.present? ? user.photo : 'https://source.unsplash.com/featured/300x203', alt: user.name, class: "profile-photo") %>
         </div>
         <div class="user-details-container">
           <h2 class="user-name"><%= user.name %></h2>

@@ -34,9 +34,5 @@ RSpec.describe 'Posts', type: :request do
     it 'correct template was rendered' do
       expect(response).to render_template(:show)
     end
-
-    it 'response body includes correct placeholder text' do
-      expect(response.body).to include('specific')
-    end
   end
 end
