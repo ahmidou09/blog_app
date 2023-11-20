@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_user, only: %i[index show]
 
   def index
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
   end
 
   def find_user
