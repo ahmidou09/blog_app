@@ -8,7 +8,7 @@
       </div>
       <div class="user-details-container">
         <h2 class="user-name"><%= @user.name %></h2>
-        <h4 class="user-posts">Number of posts: <%= @user.post_counter %></h4>
+        <h4 class="user-posts">Number of posts: <%= @user.post_counter || 0 %></h4>
       </div>
     <% end %>
   </section>
