@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'capybara'
 
 RSpec.describe 'User Show Page', type: :feature do
-  let(:user1) { User.create(name: 'John deo', id: 2, post_counter: 5, bio: 'Bio text 1', photo: 'https://source.unsplash.com/featured/300x203') }
+  let(:user1) { User.create(name: 'John deo', id: 2, post_counter: 0, bio: 'Bio text 1', photo: 'https://source.unsplash.com/featured/300x203') }
 
   let!(:post1) do
     Post.create(title: 'First post', text: 'test text', author_id: user1.id, comments_counter: 0, likes_counter: 0)
@@ -57,5 +57,10 @@ RSpec.describe 'User Show Page', type: :feature do
     visit user_path(user1)
     click_link 'See all posts'
     expect(current_path).to eq(user_posts_path(user1))
+  end
+
+  it 'displays the number of posts the user has written' do
+    visit user_path(user1)
+    expect(page).to have_content("Number of posts: #{user1.post_counter}")
   end
 end
