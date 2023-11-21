@@ -32,4 +32,12 @@ RSpec.describe 'Post show page', type: :feature do
     visit user_post_path(user, post)
     expect(page).to have_content(post.text)
   end
+  it 'Tests that assert you can see the username of each commenter' do
+    visit user_posts_path(user)
+    expect(page).to have_content(comment1.user.name)
+  end
+  it 'Tests that assert you can see the comment each commenter left' do
+    visit user_posts_path(user)
+    expect(page).to have_content(comment1.text)
+  end
 end
