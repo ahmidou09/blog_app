@@ -5,7 +5,7 @@ RSpec.describe 'User Index Page', type: :feature do
     User.create(
       name: 'Mehdi Ahmidou',
       id: 1,
-      post_counter: 2,
+      post_counter: 0,
       photo: 'https://source.unsplash.com/featured/300x203'
     )
 
@@ -32,5 +32,10 @@ RSpec.describe 'User Index Page', type: :feature do
     visit users_path
     click_link('John deo')
     expect(current_path).to eq(user_path(User.last))
+  end
+
+  it 'Should render number of posts' do
+    visit root_path
+    expect(page).to have_content('Number of posts: 0')
   end
 end
