@@ -212,9 +212,14 @@ body {
 }
 
 .actions input {
-  background-color: rgb(72, 120, 0);
-  color: white;
+  color: black;
   cursor: pointer;
+  width: 33%;
+}
+
+.field input {
+  width: 33%;
+  margin-bottom: 3rem;
 }
 
 .like-box form input,
