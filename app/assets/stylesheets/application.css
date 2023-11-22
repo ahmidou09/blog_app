@@ -57,7 +57,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3rem;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -211,6 +211,12 @@ body {
   border: 1px solid black;
 }
 
+.actions input {
+  background-color: rgb(72, 120, 0);
+  color: white;
+  cursor: pointer;
+}
+
 .like-box form input,
 .create-post-btn,
 .comment-btn {
@@ -220,11 +226,5 @@ body {
   color: white;
   font-size: 1.6rem;
   border-radius: 5px;
-  cursor: pointer;
-}
-
-.actions input {
-  background-color: rgb(72, 120, 0);
-  color: white;
   cursor: pointer;
 }
