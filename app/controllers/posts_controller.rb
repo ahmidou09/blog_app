@@ -29,26 +29,4 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
-    authorize! :destroy, @post
-
-    @user = @post.user
-    @post.comments.destroy_all
-    @post.likes.destroy_all
-    @user.decrement!(:post_counter)
-    @post.destroy
-
-    redirect_to user_posts_path(@user), notice: 'Post deleted successfully.'
-  end
-
-
-  private
-
-  def post_params
-    params.require(:post).permit(:title, :text)
-  end
-
-  def find_post
-    @post = Post.find(params[:id])
-  end
-end
+  
