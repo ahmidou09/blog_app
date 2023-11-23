@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     end
   end
 
- def destroy
+  def destroy
     authorize! :destroy, @post
 
     @user = @post.user
@@ -52,4 +52,3 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 end
- 
