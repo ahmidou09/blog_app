@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :users, only: [:index, :show] do
-     resources :posts, only: [:index, :show, :new, :create] do 
+     resources :posts, only: [:index, :show, :new, :create, :destroy] do 
        resources :likes, only: [:create]
-       resources :comments, only: [:new, :create]
+       resources :comments, only: [:new, :create, :destroy]
      end
    end
 
