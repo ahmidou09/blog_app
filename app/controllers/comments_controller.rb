@@ -1,21 +1,3 @@
-class CommentsController < ApplicationController
-  before_action :find_user_and_post, only: %i[new create]
-  before_action :find_comment, only: [:destroy]
-
-  def new
-    @comment = @post.comments.new
-  end
-
-  def create
-    @comment = @post.comments.new(comment_params)
-    @comment.user = @user
-
-    if @comment.save
-      redirect_to user_post_path(@user, @post), notice: 'Comment created successfully.'
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
 
   def destroy
     authorize! :destroy, @comment
