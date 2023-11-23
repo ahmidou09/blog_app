@@ -41,7 +41,6 @@ class PostsController < ApplicationController
     redirect_to user_posts_path(@user), notice: 'Post deleted successfully.'
   end
 
-
   private
 
   def post_params
