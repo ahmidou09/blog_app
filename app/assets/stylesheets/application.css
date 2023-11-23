@@ -12,6 +12,26 @@ ul {
 
 a {
   text-decoration: none;
+  color: blue;
+}
+
+input,
+button {
+  background-color: transparent;
+  padding: 1rem 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
 }
 
 html {
@@ -28,6 +48,24 @@ body {
 .container {
   max-width: 120rem;
   margin: 2rem auto;
+}
+
+.nav-bar {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 2rem;
 }
 
 .user-item {
@@ -171,6 +209,17 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+}
+
+.actions input {
+  color: black;
+  cursor: pointer;
+  width: 33%;
+}
+
+.field input {
+  width: 33%;
+  margin-bottom: 3rem;
 }
 
 .like-box form input,

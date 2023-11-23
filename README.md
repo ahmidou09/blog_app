@@ -104,7 +104,16 @@ To run tests, run the following command:
 - Twitter: [@el_ahmidou](https://twitter.com/el_ahmidou)
 - LinkedIn: [el mehdi ahmidou](https://www.linkedin.com/in/el-mehdi-ahmidou-312590125/)
 
+  
+  👤 **Author2**
+ *[Kenny Henshaw]*
+
+- GitHub: [Armynerh](https://github.com/Armynerh)
+- LinkedIn: [Kehinde Henshaw](https://www.linkedin.com/in/kehinde-aminah-h/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- FUTURE FEATURES -->
 

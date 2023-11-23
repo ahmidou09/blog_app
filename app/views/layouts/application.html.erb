@@ -11,8 +11,25 @@
   </head>
 
   <body>
-  <div class="container">
-    <%= yield %>
-  </div>
-  </body>
+      <nav class="nav-bar">
+        <div class="logo">
+          <%= link_to "Blog Logo", root_path, class: "logo-link" %>
+        </div>
+        <ul class="nav-list">
+          <% if user_signed_in? %>
+            <li> <%= link_to "Create new post", new_user_post_path(current_user) %> </li>
+            <li><%= link_to "Profile", edit_user_registration_path %></li> 
+            <li><%= button_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_user_registration_path %> </li>
+          <% end %>
+        </ul>
+      </nav>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </body> 
 </html>
