@@ -22,11 +22,24 @@
 
   <div class="details-comments">
     <% @post.comments.each do |comment| %>
-      <span><%= comment.user.name %>: <%= comment.text %></span>
+      <div>
+        <span>
+          <%= comment.user.name %>: <%= comment.text %>
+        </span>
+        <% if can? :destroy, comment %>
+          <%= button_to "Delete", [@user, @post, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </section>
 
-<%= link_to new_user_post_comment_path(@user, @post) do %>
-  <button class="comment-btn">Add comment</button>
-<% end %>
+<div class="box-btn">
+  <%= link_to new_user_post_comment_path(@user, @post) do %>
+    <button class="comment-btn">Add comment</button>
+  <% end %>
+
+  <% if can? :destroy, @post %>
+    <%= button_to "Delete Post", [@user, @post], method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>

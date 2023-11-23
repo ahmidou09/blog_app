@@ -1,6 +1,6 @@
 <h2>Create new post</h2>
 
-<%= form_with model: [@user, @post] do |form| %>
+<%= form_with model: [@user, @post], url: user_posts_path(@user) do |form| %>
   <% if @post.errors.any? %>
     <% @post.errors.full_messages.each do |message| %>
       <p><%= message %></p>
