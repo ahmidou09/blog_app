@@ -211,6 +211,24 @@ body {
   border: 1px solid black;
 }
 
+.details-comments div {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-comments div:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.details-comments div button {
+  background-color: rgb(192, 101, 101);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 .actions input {
   color: black;
   cursor: pointer;
@@ -232,4 +250,18 @@ body {
   font-size: 1.6rem;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.center {
+  text-align: center;
+  font-weight: bolder;
+  color: green;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.box-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }

@@ -14,3 +14,7 @@
 
   <%= form.submit "Add" %>
 <% end %>
+
+<% if can? :destroy, @comment %>
+  <%= button_to "Delete", comment_path(@comment), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
