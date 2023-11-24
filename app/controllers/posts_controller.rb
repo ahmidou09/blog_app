@@ -1,25 +1,22 @@
 class PostsController < ApplicationController
   before_action :find_user, only: %i[index show new create]
-  before_action :find_post, only: %i[show destroy]
+  load_and_authorize_resource
 
   def index
+    authorize! :read, Post
     @posts = @user.posts.includes(:comments)
   end
 
-  def find_user
-    @user = User.find(params[:user_id])
-  end
-
-  def show
-    @post = @user.posts.find(params[:id])
-  end
+  def show; end
 
   def new
     @user = current_user
-    @post = @user.posts.new
   end
 
   def create
+    @post = Post.create(post_params)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
     @post = current_user.posts.new(post_params)
     if @post.save
       current_user.update(post_counter: current_user.posts.count)
@@ -30,8 +27,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    authorize! :destroy, @post
-
     @user = @post.user
     @post.comments.destroy_all
     @post.likes.destroy_all
@@ -43,11 +38,11 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
-    params.require(:post).permit(:title, :text)
+  def find_user
+    @user = User.find(params[:user_id])
   end
 
-  def find_post
-    @post = Post.find(params[:id])
+  def post_params
+    params.require(:post).permit(:title, :text, :comments_counter, :likes_counter)
   end
 end
