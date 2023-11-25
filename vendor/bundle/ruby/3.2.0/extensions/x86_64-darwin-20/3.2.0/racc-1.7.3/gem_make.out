@@ -1,0 +1,18 @@
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-1ftkht sitelibdir\=./.gem.20231120-26708-1ftkht clean
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-1ftkht sitelibdir\=./.gem.20231120-26708-1ftkht
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-1ftkht sitelibdir\=./.gem.20231120-26708-1ftkht install
+/usr/local/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20231120-26708-1ftkht/racc
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-1ftkht sitelibdir\=./.gem.20231120-26708-1ftkht clean

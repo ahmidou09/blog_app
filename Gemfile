@@ -75,3 +75,7 @@ gem 'devise', '~> 4.9'
 gem 'cancancan'
 
 gem 'jwt', '2.7.1'
+
+gem 'rswag'
+
+gem 'rswag-api'

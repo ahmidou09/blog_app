@@ -1,0 +1,19 @@
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-9mahzk sitelibdir\=./.gem.20231120-26708-9mahzk clean
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-9mahzk sitelibdir\=./.gem.20231120-26708-9mahzk
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-9mahzk sitelibdir\=./.gem.20231120-26708-9mahzk install
+/usr/local/bin/ginstall -c -m 0755 debug.bundle ./.gem.20231120-26708-9mahzk/debug
+
+current directory: /Users/oyeniyikenny/Desktop/blog_app/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231120-26708-9mahzk sitelibdir\=./.gem.20231120-26708-9mahzk clean
